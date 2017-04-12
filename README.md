@@ -31,7 +31,7 @@ You can use the code to train/evaluate a network for object detection task. For 
   ```
 
 2. Build the code. Please follow [Caffe instruction](http://caffe.berkeleyvision.org/installation.html) to install all necessary packages and build it.
-  Before build it, you should install CUDA and CUDNN(>v5.0).
+  Before build it, you should install CUDA and CUDNN(v5.0).
   ```Shell
   # Modify Makefile.config according to your Caffe installation.
   cp Makefile.config.example Makefile.config
@@ -58,33 +58,32 @@ You can use the code to train/evaluate a network for object detection task. For 
   cd $CAFFE_ROOT/data/KITTI-car/
   ./extrach_car_label.sh
   ```
-   Before create the LMDB files. The labels should be converted to VOC type. We provide some matlab scripts to finish this. The scripts are in $CAFFE_ROOT/data/convert_labels.
-   Just modify line 4 in converlabels.m (root_dir = '/your/path/to/KITTI/') to your path to kitti, and run the script. Voc type labels will be generated in `$kitti_root/training/labels_2car/xml`. 
+   Before create the LMDB files. The labels should be converted to VOC type. We provide some matlab scripts to finish this. The scripts are in `$CAFFE_ROOT/data/convert_labels/`.
+   Just modify line 4 in converlabels.m (`root_dir = '/your/path/to/KITTI/';`) to your path to kitti, and run the script. Voc type labels will be generated in `$KITTI_ROOT/training/labels_2car/xml/`. 
   ```Shell
   cd $CAFFE_ROOT/data/KITTI-car/
   # Create the trainval.txt, test.txt, and test_name_size.txt in data/KITTI-car/
   ./create_list.sh
   # You can modify the parameters in create_data.sh if needed.
   # It will create lmdb files for trainval and test with encoded original image:
-  #   - $HOME/data/KITTI-car/lmdb/KITTI-car_training_lmdb/
-  #   - $HOME/data/KITTI-car/lmdb/KITTI-car_testing_lmdb/
+  #   - $CAFFE_ROOT/data/KITTI-car/lmdb/KITTI-car_training_lmdb/
+  #   - $CAFFE_ROOT/data/KITTI-car/lmdb/KITTI-car_testing_lmdb/
   # and make soft links at data/KITTI-car/lmdb
   ./data/KITTI-car/create_data.sh
   ```
 
 ### Train/Eval
 1. Train your model and evaluate the model on the fly.
-  ```Shell
-  # It will create model definition files and save snapshot models in:
-  #   - $CAFFE_ROOT/models/VGGNet/KITTI/RRC_2560x768_kitti_car/
-  # and job file, log file in:
-  #   - $CAFFE_ROOT/jobs/VGGNet/KITIIT/RRC_2560x768_kitti_car/
-  # After 60k iterations, we can get the model as we said in the paper (mAP 89.*% in KITTI).
-  python examples/car/ssd_kitti_car.py
-
-  # Before run the testing script. You should modify [line 10: img_dir] to [your path to kitti testing images].
-  python examples/car/rrc_test.py
-  ```
+   ```Shell
+   # It will create model definition files and save snapshot models in:
+   #   - $CAFFE_ROOT/models/VGGNet/KITTI/RRC_2560x768_kitti_car/
+   # and job file, log file in:
+   #   - $CAFFE_ROOT/jobs/VGGNet/KITIIT/RRC_2560x768_kitti_car/
+   # After 60k iterations, we can get the model as we said in the paper (mAP 89.*% in KITTI).
+   python examples/car/ssd_kitti_car.py
+   # Before run the testing script. You should modify [line 10: img_dir] to [your path to kitti testing images].
+   python examples/car/rrc_test.py
+   ```
   You can submit the result at [kitti submit](http://www.cvlibs.net/datasets/kitti/user_login.php).
   If you don't have time to train your model, you can download a pre-trained model at [here]().
 
