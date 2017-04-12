@@ -102,5 +102,5 @@ TBA
 
 
 ### ACKNOWLEDGE
-Thanks to Wei Liu, we benifit a lot from his previous work [SSD (Single Shot Multibox Detector)](https://github.com/weiliu89/caffe/tree/ssd).
+Thanks to Wei Liu, we have benifited a lot from his previous work [SSD (Single Shot Multibox Detector)](https://github.com/weiliu89/caffe/tree/ssd).
 
