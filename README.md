@@ -4,7 +4,7 @@
 ### Introduction
 
 You can use the code to train/evaluate a network for object detection task. For more details, please refer to our paper (TBA).
-
+<center>
 | method | KITTI test *mAP* car(moderate)|
 | ------- | ----- |
 | [MS-CNN](https://github.com/zhaoweicai/mscnn) | 89.02% | 
@@ -12,13 +12,9 @@ You can use the code to train/evaluate a network for object detection task. For 
 | [SDP+RPN](http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Yang_Exploit_All_the_CVPR_2016_paper.pdf)| 88.85% |
 | [Mono3D](http://3dimage.ee.tsinghua.edu.cn/cxz/mono3d)| 88.66% |
 | RRC (single model) | **89.85%** |
-| RRC (ensemble) | **90.19%** |
-
-
+<\center>
 ### Citing RRC
 TBA
-
-
 ### Contents
 1. [Installation](#installation)
 2. [Preparation](#preparation)
@@ -32,7 +28,6 @@ TBA
    https://github.com/xiaohaoChen/rrc_detection.git
    cd rrc_detection
    ```
-
 2. Build the code. Please follow [Caffe instruction](http://caffe.berkeleyvision.org/installation.html) to install all necessary packages and build it.
    Before build it, you should install CUDA and CUDNN(v5.0)
    ```Shell
@@ -75,7 +70,7 @@ TBA
    # and make soft links at data/KITTI-car/lmdb
     ./data/KITTI-car/create_data.sh
    ```
-
+   
 ### Train/Eval
 1. Train your model and evaluate the model on the fly.
    ```Shell
@@ -99,10 +94,8 @@ TBA
    cd $caffe_root
    python models/VGGNet/KITTI/RRC_2560x768_kitti_4r4b_max_size/rrc_test.py
    ```
-
 2. Evaluate the most recent snapshot.
    For testing a model you trained, you show modify the path in `rrc_test.py`.
-
 
 ### Acknowledge
 Thanks to Wei Liu, we have benifited a lot from his previous work [SSD (Single Shot Multibox Detector)](https://github.com/weiliu89/caffe/tree/ssd).
