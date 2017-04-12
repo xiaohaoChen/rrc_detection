@@ -31,8 +31,7 @@ You can use the code to train/evaluate a network for object detection task. For 
    ```
 
 2. Build the code. Please follow [Caffe instruction](http://caffe.berkeleyvision.org/installation.html) to install all necessary packages and build it.
-   Before build it, you should install CUDA and CUDNN(v5.0).<br>
-
+   Before build it, you should install CUDA and CUDNN(v5.0)
    ```Shell
    # Modify Makefile.config according to your Caffe installation.
    cp Makefile.config.example Makefile.config
@@ -60,9 +59,7 @@ You can use the code to train/evaluate a network for object detection task. For 
    ./extrach_car_label.sh
    ```
    Before create the LMDB files. The labels should be converted to VOC type. We provide some matlab scripts to finish this. The scripts are in `$CAFFE_ROOT/data/convert_labels/`.<br> 
-
    Just modify line 4 in converlabels.m (`root_dir = '/your/path/to/KITTI/';`) to your path to kitti, and run the script. VOC type labels will be generated in `$KITTI_ROOT/training/labels_2car/xml/`. 
-
    ```Shell
    cd $CAFFE_ROOT/data/KITTI-car/
    # Create the trainval.txt, test.txt, and test_name_size.txt in data/KITTI-car/
@@ -77,7 +74,6 @@ You can use the code to train/evaluate a network for object detection task. For 
 
 ### Train/Eval
 1. Train your model and evaluate the model on the fly.
-
    ```Shell
    # It will create model definition files and save snapshot models in:
    #   - $CAFFE_ROOT/models/VGGNet/KITTI/RRC_2560x768_kitti_car/
@@ -89,8 +85,7 @@ You can use the code to train/evaluate a network for object detection task. For 
    python examples/car/rrc_test.py
    ```
    You can submit the result at [kitti submit](http://www.cvlibs.net/datasets/kitti/user_login.php).
-   If you don't have time to train your model, you can download a pre-trained model at [here]().
- 
+   If you don't have time to train your model, you can download a pre-trained model at [here](). 
    Unzip our files to $caffe_root/models/VGGNet/KITTI/, and run the testing script, you will get the same result as the single model result we showed in the  paper.
    ```Shell
    # before run the script, you should modify the kitti_root at line 10.
