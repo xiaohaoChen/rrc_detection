@@ -101,7 +101,7 @@ TBA
    ```
 
 2. Evaluate the most recent snapshot.
-   For testing a model you trained, you show modify the path in rrc_test.py.
+   For testing a model you trained, you show modify the path in `rrc_test.py`.
 
 
 ### ACKNOWLEDGE
