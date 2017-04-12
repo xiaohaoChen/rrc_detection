@@ -31,7 +31,7 @@ You can use the code to train/evaluate a network for object detection task. For 
    ```
 
 2. Build the code. Please follow [Caffe instruction](http://caffe.berkeleyvision.org/installation.html) to install all necessary packages and build it.
-   Before build it, you should install CUDA and CUDNN(v5.0).
+   Before build it, you should install CUDA and CUDNN(v5.0).<br>
 
    ```Shell
    # Modify Makefile.config according to your Caffe installation.
