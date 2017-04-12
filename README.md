@@ -104,6 +104,6 @@ TBA
    For testing a model you trained, you show modify the path in `rrc_test.py`.
 
 
-### ACKNOWLEDGE
+### Acknowledge
 Thanks to Wei Liu, we have benifited a lot from his previous work [SSD (Single Shot Multibox Detector)](https://github.com/weiliu89/caffe/tree/ssd).
 
