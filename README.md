@@ -14,10 +14,6 @@ You can use the code to train/evaluate a network for object detection task. For 
 | RRC (single model) | **89.85%** |
 | RRC (ensemble) | **90.19%** |
 
-| 表头1  | 表头2|
-| ---------- | -----------|
-| 表格单元   | 表格单元   |
-| 表格单元   | 表格单元   |
 
 ### Citing RRC
 TBA
