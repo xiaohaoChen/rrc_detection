@@ -1,0 +1,20 @@
+item {
+  name: "none_of_the_above"
+  label: 0
+  display_name: "background"
+}
+item {
+  name: "Car"
+  label: 1
+  display_name: "Car"
+}
+item {
+  name: "Pedestrian"
+  label: 2
+  display_name: "Pedestrian"
+}
+item {
+  name: "Cyclist"
+  label: 3
+  display_name: "Cyclist"
+}
