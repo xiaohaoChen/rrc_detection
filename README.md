@@ -89,10 +89,10 @@ TBA
    python examples/car/rrc_test.py
    ```
    You can submit the result at [kitti submit](http://www.cvlibs.net/datasets/kitti/user_login.php).
-   If you don't have time to train your model, you can download a pre-trained model.
-   [Google Drive](https://drive.google.com/open?id=0ByGD7RFf_dTxS2ZWcWo5cTVQaDQ). 
-   [Baidu Cloud](https://pan.baidu.com/s/1c2H0NxY).
-   Unzip our files to `$caffe_root/models/VGGNet/KITTI/`, and run the testing script, you will get the same result as the single model result we showed in the  paper.
+   If you don't have time to train your model, you can download a pre-trained model.\<br>
+   [Google Drive](https://drive.google.com/open?id=0ByGD7RFf_dTxS2ZWcWo5cTVQaDQ). \<br>
+   [Baidu Cloud](https://pan.baidu.com/s/1c2H0NxY).\<br>
+   Unzip the files in `$caffe_root/models/VGGNet/KITTI/`, and run the testing script `rrc_test.py`, you will get the same result as the single model result we showed in the  paper.
    ```Shell
    # before run the script, you should modify the kitti_root at line 10.
    # Make sure that the work directory is caffe_root
