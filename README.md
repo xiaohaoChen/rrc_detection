@@ -58,7 +58,7 @@ You can use the code to train/evaluate a network for object detection task. For 
    cd $CAFFE_ROOT/data/KITTI-car/
    ./extrach_car_label.sh
    ```
-   Before create the LMDB files. The labels should be converted to VOC type. We provide some matlab scripts to finish this. The scripts are in `$CAFFE_ROOT/data/convert_labels/`.<br> 
+   Before create the LMDB files. The labels should be converted to VOC type. We provide some matlab scripts to finish this. The scripts are in `$CAFFE_ROOT/data/convert_labels/`.\<br> 
    Just modify line 4 in converlabels.m (`root_dir = '/your/path/to/KITTI/';`) to your path to kitti, and run the script. VOC type labels will be generated in `$KITTI_ROOT/training/labels_2car/xml/`. 
    ```Shell
    cd $CAFFE_ROOT/data/KITTI-car/
@@ -86,7 +86,7 @@ You can use the code to train/evaluate a network for object detection task. For 
    ```
    You can submit the result at [kitti submit](http://www.cvlibs.net/datasets/kitti/user_login.php).
    If you don't have time to train your model, you can download a pre-trained model at [here](). 
-   Unzip our files to $caffe_root/models/VGGNet/KITTI/, and run the testing script, you will get the same result as the single model result we showed in the  paper.
+   Unzip our files to `$caffe_root/models/VGGNet/KITTI/`, and run the testing script, you will get the same result as the single model result we showed in the  paper.
    ```Shell
    # before run the script, you should modify the kitti_root at line 10.
    cd $caffe_root
