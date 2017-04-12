@@ -59,7 +59,7 @@ You can use the code to train/evaluate a network for object detection task. For 
   cd $CAFFE_ROOT/data/KITTI-car/
   ./extrach_car_label.sh
   ```
-   Before create the LMDB files. The labels should be converted to VOC type. We provide some matlab scripts to finish this. The scripts are in `$CAFFE_ROOT/data/convert_labels/`.\<br> 
+   Before create the LMDB files. The labels should be converted to VOC type. We provide some matlab scripts to finish this. The scripts are in `$CAFFE_ROOT/data/convert_labels/`.<br> 
 
    Just modify line 4 in converlabels.m (`root_dir = '/your/path/to/KITTI/';`) to your path to kitti, and run the script. VOC type labels will be generated in `$KITTI_ROOT/training/labels_2car/xml/`. 
 
