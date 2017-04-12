@@ -24,7 +24,7 @@ TBA
 2. [Preparation](#preparation)
 3. [Train/Eval](#traineval)
 4. [Models](#models)
-4. [Contact](#contact)
+4. [Ackonwledge](#Acknowledge)
 
 ### Installation
 1. Get the code. We will call the directory that you cloned Caffe into `$CAFFE_ROOT`
