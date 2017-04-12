@@ -1,19 +1,22 @@
 # Accurate Single Stage Detector Using Recurrent Rolling Convolution
 
 
-
 ### Introduction
 
-You can use the code to train/evaluate a network for object detection task. For more details, please refer to our paper ().
-
-
+You can use the code to train/evaluate a network for object detection task. For more details, please refer to our paper (TBA).
 <center>
-
-
+| method | KITTI test *mAP* car(moderate)|
+|:-------|:-----:|
+| [MS-CNN](https://github.com/zhaoweicai/mscnn) | 89.02% | 
+| [Sub-CNN]| 89.04% | 
+| [SDP+RPN]| 88.85% |
+| [Mono3D]| 88.66% |
+| RRC (single model) | 89.85% |
+| RRC (ensemble) | **90.19%** |
 </center>
 
 ### Citing RRC
-
+TBA
 
 
 ### Contents
@@ -43,7 +46,8 @@ You can use the code to train/evaluate a network for object detection task. For 
    ```
 
 ### Preparation
-1. Download [fully convolutional reduced (atrous) VGGNet](https://gist.github.com/weiliu89/2ed6e13bfd5b57cf81d6). By default, we assume the model is stored in `$CAFFE_ROOT/models/VGGNet/`.
+1. Download [fully convolutional reduced (atrous) VGGNet](https://gist.github.com/weiliu89/2ed6e13bfd5b57cf81d6). 
+   By default, we assume the model is stored in `$CAFFE_ROOT/models/VGGNet/`.
 
 2. Download the KITTI dataset(http://www.cvlibs.net/datasets/kitti/eval_object.php). 
    By default, we assume the data is stored in `$HOME/data/KITTI/`
@@ -97,5 +101,6 @@ You can use the code to train/evaluate a network for object detection task. For 
    For testing a model you trained, you show modify the path in rrc_test.py.
 
 
-### Contact
+### ACKNOWLEDGE
+Thanks to Wei Liu, we benifit a lot from his previous work [SSD (Single Shot Multibox Detector)](https://github.com/weiliu89/caffe/tree/ssd).
 
