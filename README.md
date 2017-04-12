@@ -5,6 +5,7 @@
 
 You can use the code to train/evaluate a network for object detection task. For more details, please refer to our paper (TBA).
 <center>
+
 | method | KITTI test *mAP* car(moderate)|
 |:-------|:-----:|
 | [MS-CNN](https://github.com/zhaoweicai/mscnn) | 89.02% | 
@@ -13,6 +14,7 @@ You can use the code to train/evaluate a network for object detection task. For 
 | [Mono3D]| 88.66% |
 | RRC (single model) | 89.85% |
 | RRC (ensemble) | **90.19%** |
+
 </center>
 
 ### Citing RRC
