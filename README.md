@@ -50,16 +50,21 @@ TBA
    uzip the training images, testing images and the labels in `$HOME/data/KITTI/`.
 
 3. Create the LMDB file.
-   For training the models for car detection.
-   As only the images contain cars are adopted for training set, we should extract the labels for cars from the original labels.
+   For training .
+   As only the images contain cars are adopted as training set for car detection,  the labels for cars should be extracted.      
    We have provided the list of images contain cars in `$CAFFE_ROOT/data/KITTI-car/`.
    ```Shell
    # extract the labels for cars
    cd $CAFFE_ROOT/data/KITTI-car/
    ./extrach_car_label.sh
    ```
-   Before create the LMDB files. The labels should be converted to VOC type. We provide some matlab scripts to finish this. The scripts are in `$CAFFE_ROOT/data/convert_labels/`.       
-   Just modify converlabels.m (`line 4: root_dir = '/your/path/to/KITTI/';`) to your path to kitti. VOC type labels will be generated in `$KITTI_ROOT/training/labels_2car/xml/`. 
+   Before create the LMDB files. The labels should be converted to VOC type. We provide some matlab scripts to finish this.     
+   The scripts are in `$CAFFE_ROOT/data/convert_labels/`.       
+   Just modify converlabels.m.
+   ```Shell
+   line 4: root_dir = '/your/path/to/KITTI/';
+   ```
+   VOC type labels will be generated in `$KITTI_ROOT/training/labels_2car/xml/`. 
    ```Shell
    cd $CAFFE_ROOT/data/KITTI-car/
    # Create the trainval.txt, test.txt, and test_name_size.txt in data/KITTI-car/
@@ -71,7 +76,6 @@ TBA
    # and make soft links at data/KITTI-car/lmdb
     ./data/KITTI-car/create_data.sh
    ```
-   
 ### Train/Eval
 1. Train your model and evaluate the model.
    ```Shell
