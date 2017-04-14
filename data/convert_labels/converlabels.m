@@ -52,7 +52,7 @@ for i = 1:total
     obj_voc.annotation.size.height = num2str(size(img,1));   
     obj_voc.annotation.size.depth = num2str(size(img,3));
     for o = 1:numel(objects)
-       if ~(strcmp(objects(o).type,'Car')
+       if ~(strcmp(objects(o).type,'Car'))
            continue
        end
        obj_voc.annotation.object(o).name = objects(o).type;
