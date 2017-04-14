@@ -5,13 +5,13 @@
 
 You can use the code to train/evaluate a network for object detection task. For more details, please refer to our paper (TBA).
 
-      | method | KITTI test *mAP* car(moderate)|
-      | ------- | ----- |
-      | [MS-CNN](https://github.com/zhaoweicai/mscnn) | 89.02% | 
-      | [Sub-CNN](https://arxiv.org/pdf/1604.04693.pdf)| 89.04% | 
-      | [SDP+RPN](http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Yang_Exploit_All_the_CVPR_2016_paper.pdf)| 88.85% |
-      | [Mono3D](http://3dimage.ee.tsinghua.edu.cn/cxz/mono3d)| 88.66% |
-      | RRC (single model) | **89.85%** |
+| method | KITTI test *mAP* car (moderate)|
+| ------- | ----- |
+| [MS-CNN](https://github.com/zhaoweicai/mscnn) | 89.02% | 
+| [Sub-CNN](https://arxiv.org/pdf/1604.04693.pdf)| 89.04% | 
+| [SDP+RPN](http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Yang_Exploit_All_the_CVPR_2016_paper.pdf)| 88.85% |
+| [Mono3D](http://3dimage.ee.tsinghua.edu.cn/cxz/mono3d)| 88.66% |
+| RRC (single model) | **89.85%** |
 
 ### Citing RRC
 TBA
@@ -30,7 +30,7 @@ TBA
    ```
 2. Build the code. Please follow [Caffe instruction](http://caffe.berkeleyvision.org/installation.html) to install all necessary packages and build it.
    Before build it, you should install CUDA and CUDNN(v5.0).    
-   **CUDA 7.5 and CUDNN v5.0 were adapted in our computer. **
+   CUDA 7.5 and CUDNN v5.0 were adapted in our computer. 
    ```Shell
    # Modify Makefile.config according to your Caffe installation.
    cp Makefile.config.example Makefile.config
@@ -58,8 +58,8 @@ TBA
    cd $CAFFE_ROOT/data/KITTI-car/
    ./extrach_car_label.sh
    ```
-   Before create the LMDB files. The labels should be converted to VOC type. We provide some matlab scripts to finish this. The scripts are in `$CAFFE_ROOT/data/convert_labels/`.\<br> 
-   Just modify line 4 in converlabels.m (`root_dir = '/your/path/to/KITTI/';`) to your path to kitti, and run the script. VOC type labels will be generated in `$KITTI_ROOT/training/labels_2car/xml/`. 
+   Before create the LMDB files. The labels should be converted to VOC type. We provide some matlab scripts to finish this. The scripts are in `$CAFFE_ROOT/data/convert_labels/`.       
+   Just modify converlabels.m (`line 4: root_dir = '/your/path/to/KITTI/';`) to your path to kitti. VOC type labels will be generated in `$KITTI_ROOT/training/labels_2car/xml/`. 
    ```Shell
    cd $CAFFE_ROOT/data/KITTI-car/
    # Create the trainval.txt, test.txt, and test_name_size.txt in data/KITTI-car/
@@ -84,8 +84,8 @@ TBA
    # Before run the testing script. You should modify [line 10: img_dir] to [your path to kitti testing images].
    python examples/car/rrc_test.py
    ```
-   We train our models in a computer with 4 TITAN X(Maxwell) GPU cards. By default, we assume you train the models on mechines with 4 TITAN X GPUs.
-   If you only have one TITAN X card, you should modify the script `rrc_kitti.py`.
+   We train our models in a computer with 4 TITAN X(Maxwell) GPU cards. By default, we assume you train the models on mechines with 4 TITAN X GPUs.       
+   If you only have one TITAN X card, you should modify the script `rrc_kitti.py`.    
    ```Shell
    line 118: gpus = "0,1,2,3" -> gpus = "0"
    line 123: batch_size = 4   -> batch_size = 1
