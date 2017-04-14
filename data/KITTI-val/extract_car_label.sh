@@ -1,6 +1,6 @@
 #!/bin/sh  
 
-kitti_path="/home/ubuntu/data/KITTI/"                   #path to kitti dataset
+kitti_path="/$HOME/data/KITTI/"                   #path to kitti dataset
 kitti_label_path="$kitti_path/training/label_2"         #path to the labels of kitti
 kitti_car_label_path="$kitti_path/training/label_2car"  #path to the labels of cars in kitti
 

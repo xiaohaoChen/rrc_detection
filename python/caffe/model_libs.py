@@ -948,45 +948,14 @@ def CreateRollingStruct(net,from_layers_basename=[],num_outputs=[],odd=[],rollin
         net[o_layer]=L.Concat(*f_layers,axis = 1)
         
         f_layer = o_layer
-        # if(HighWay):
-        #     o_layer = '%s_cct%d'%(from_layers_basename[i],roll_idx+1)
-        # else:
-        #     o_layer = '%s_%d'%(from_layers_basename[i],roll_idx+1)
         o_layer = '%s_%d'%(from_layers_basename[i],roll_idx+1)
         kwargs = {
             'param': [dict(name='%s_cw'%(from_layers_basename[i]),lr_mult=1, decay_mult=1), dict(name='%s_cb'%(from_layers_basename[i]),lr_mult=2, decay_mult=0)],
             'weight_filler': dict(type='xavier'),
             'bias_filler': dict(type='constant', value=0)}
         net[o_layer]=L.Convolution(net[f_layer],num_output=num_outputs[i], kernel_size=1, stride=1, **kwargs)
-        # if BN:
-        #     AddBN(net,o_layer)
         net['relu_%s'%(o_layer)]=L.ReLU(net[o_layer],in_place=True)
         
-        # if(HighWay):
-        #     f_layer=from_layers[i]
-        #     t_layer = '%s_T%d'%(from_layers_basename[i],roll_idx)
-        #     kwargs = {
-        #     'param': [dict(lr_mult=1, decay_mult=1), dict(lr_mult=2, decay_mult=0)],
-        #     'weight_filler': dict(type = 'gaussian',std = 0.0001),
-
-        #     #'weight_filler': dict(type='constant', value=0),
-        #     'bias_filler': dict(type='constant', value=0)}
-        #     net[t_layer]=L.Convolution(net[f_layer],num_output=num_outputs[i],kernel_size=1,stride=1,**kwargs)
-        #     net['relu_%s'%(t_layer)]=L.ReLU(net[t_layer],in_place=True)
-        #     n_layer = '%s_n%d'%(from_layers_basename[i],roll_idx)
-        #     kwargs = {
-        #     'param': [dict(lr_mult=0, decay_mult=0), dict(lr_mult=0, decay_mult=0)],
-        #     'weight_filler': dict(type='constant',value=-1),
-        #     'bias_filler': dict(type='constant', value=0),
-        #     'group':num_outputs[i]
-        #     } 
-        #     net[n_layer]=L.Convolution(net[t_layer],num_output=num_outputs[i],kernel_size=1,stride=1,**kwargs)
-        #     p1_layer = '%s_HT%d'%(from_layers_basename[i],roll_idx);           
-        #     net[p1_layer] = L.Eltwise(*{net[t_layer],net[o_layer]},operation=0);
-        #     p2_layer = '%s_nxT%d'%(from_layers_basename[i],roll_idx);
-        #     net[p2_layer] = L.Eltwise(*{net[n_layer],net[f_layer]},operation=0);
-        #     o_layer = '%s_%d'%(from_layers_basename[i],roll_idx+1)
-        #     net[o_layer] = L.Eltwise(*{net[f_layer],net[p1_layer],net[p2_layer]},operation=1);
         roll_layers.append(o_layer)
         
     return roll_layers
