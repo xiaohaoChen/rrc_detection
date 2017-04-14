@@ -58,9 +58,8 @@ TBA
    cd $CAFFE_ROOT/data/KITTI-car/
    ./extrach_car_label.sh
    ```
-   Before create the LMDB files. The labels should be converted to VOC type. We provide some matlab scripts to finish this.     
-   The scripts are in `$CAFFE_ROOT/data/convert_labels/`.       
-   Just modify converlabels.m.
+   Before create the LMDB files. The labels should be converted to VOC type. We provide some matlab scripts.     
+   The scripts are in `$CAFFE_ROOT/data/convert_labels/`. Just modify `converlabels.m`.
    ```Shell
    line 4: root_dir = '/your/path/to/KITTI/';
    ```
