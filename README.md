@@ -63,7 +63,8 @@ Please cite RRC in your publications if it helps your research:
    ```Shell
    # extract the labels for cars
    cd $CAFFE_ROOT/data/KITTI-car/
-   ./extrach_car_label.sh```
+   ./extrach_car_label.sh
+   ```
 
    Before create the LMDB files. The labels should be converted to VOC type. We provide some matlab scripts.     
    The scripts are in `$CAFFE_ROOT/data/convert_labels/`. Just modify `converlabels.m`.
