@@ -4,7 +4,7 @@ By [Jimmy Ren](http://www.jimmyren.com/), Xiaohao Chen, Jianbo Liu, Wenxiu Sun, 
 ### Introduction
 
 High localization accuracy is crucial in many real-world applications. We propose a novel
-single stage end-to-end object detection network (RRC) to produce high accuracy detection results. You can use the code to train/evaluate a network for object detection task. For more details, please refer to our [paper](https://arxiv.org/abs/1704.05776).
+single stage end-to-end object detection network (RRC) to produce high accuracy detection results. You can use the code to train/evaluate a network for object detection task. For more details, please refer to our paper (https://arxiv.org/abs/1704.05776).
 
 | method | KITTI test *mAP* car (moderate)|
 | :-------: | :-----: |
@@ -18,12 +18,12 @@ single stage end-to-end object detection network (RRC) to produce high accuracy 
 
 Please cite RRC in your publications if it helps your research:
 
-  @inproceedings{jimmy2017rrc,   
-    title = {Accurate Single Stage Detector Using Recurrent Rolling Convolution},     
-    author = {Jimmy, Ren and Xiaohao, Chen and Jianbo, Liu and Wenxiu, Sun and Jiahao, Pang and Qiong, Yan and Yu-Wing, Tai and Li, Xu},   
-    booktitle = {CVPR},   
-    year = {2017}
-  }
+@inproceedings{Ren16CVPR,    
+  author = {Jimmy Ren and Xiaohao Chen and Jianbo Liu and Wenxiu Sun and Jiahao Pang and Qiong Yan and Yu-Wing Tai and Li Xu},       
+  title = {Accurate Single Stage Detector Using Recurrent Rolling Convolution},      
+  booktitle = {CVPR},         
+  year = {2017}     
+}
 ### Contents
 1. [Installation](#installation)
 2. [Preparation](#preparation)
