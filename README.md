@@ -1,27 +1,35 @@
 # Accurate Single Stage Detector Using Recurrent Rolling Convolution
-
+By [Jimmy Ren](http://www.jimmyren.com/), Xiaohao Chen, Jianbo Liu, Wenxiu Sun, Jiahao Pang, Qiong Yan, Yu-Wing Tai, Li Xu.
 
 ### Introduction
 
-You can use the code to train/evaluate a network for object detection task. For more details, please refer to our paper (TBA).
+High localization accuracy is crucial in many real-world applications. We propose a novel
+single stage end-to-end object detection network (RRC) to produce high accuracy detection results. You can use the code to train/evaluate a network for object detection task. For more details, please refer to our [paper](https://arxiv.org/abs/1704.05776).
 
 | method | KITTI test *mAP* car (moderate)|
-| ------- | ----- |
+| :-------: | :-----: |
 | [Mono3D](http://3dimage.ee.tsinghua.edu.cn/cxz/mono3d)| 88.66% |
 | [SDP+RPN](http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Yang_Exploit_All_the_CVPR_2016_paper.pdf)| 88.85% |
-| [MS-CNN](https://github.com/zhaoweicai/mscnn) | 89.02% | 
-| [Sub-CNN](https://arxiv.org/pdf/1604.04693.pdf)| 89.04% | 
+| [MS-CNN](https://github.com/zhaoweicai/mscnn) | 89.02% |
+| [Sub-CNN](https://arxiv.org/pdf/1604.04693.pdf) | 89.04% |
 | RRC (single model) | **89.85%** |
 
 ### Citing RRC
-TBA
+
+Please cite RRC in your publications if it helps your research:
+
+@inproceedings{jimmy2017rrc,
+  title = {Accurate Single Stage Detector Using Recurrent Rolling Convolution},
+  author = {Jimmy, Ren and Xiaohao, Chen and Jianbo, Liu and Wenxiu, Sun and Jiahao, Pang and Qiong, Yan and Yu-Wing, Tai and Li, Xu},
+  booktitle = {CVPR},
+  year = {2017}
+}
 ### Contents
 1. [Installation](#installation)
 2. [Preparation](#preparation)
 3. [Train/Eval](#traineval)
 4. [Models](#models)
 4. [Ackonwledge](#Acknowledge)
-
 ### Installation
 1. Get the code. We will call the directory that you cloned Caffe into `$CAFFE_ROOT`
    ```Shell
@@ -30,7 +38,7 @@ TBA
    ```
 2. Build the code. Please follow [Caffe instruction](http://caffe.berkeleyvision.org/installation.html) to install all necessary packages and build it.
    Before build it, you should install CUDA and CUDNN(v5.0).    
-   CUDA 7.5 and CUDNN v5.0 were adapted in our computer. 
+   CUDA 7.5 and CUDNN v5.0 were adapted in our computer.
    ```Shell
    # Modify Makefile.config according to your Caffe installation.
    cp Makefile.config.example Makefile.config
@@ -40,12 +48,11 @@ TBA
    make test -j8
    make runtest -j8
    ```
-
 ### Preparation
-1. Download [fully convolutional reduced (atrous) VGGNet](https://gist.github.com/weiliu89/2ed6e13bfd5b57cf81d6). 
+1. Download [fully convolutional reduced (atrous) VGGNet](https://gist.github.com/weiliu89/2ed6e13bfd5b57cf81d6).
    By default, we assume the model is stored in `$CAFFE_ROOT/models/VGGNet/`.
 
-2. Download the KITTI dataset(http://www.cvlibs.net/datasets/kitti/eval_object.php). 
+2. Download the KITTI dataset(http://www.cvlibs.net/datasets/kitti/eval_object.php).
    By default, we assume the data is stored in `$HOME/data/KITTI/`
    uzip the training images, testing images and the labels in `$HOME/data/KITTI/`.
 
@@ -56,14 +63,14 @@ TBA
    ```Shell
    # extract the labels for cars
    cd $CAFFE_ROOT/data/KITTI-car/
-   ./extrach_car_label.sh
-   ```
+   ./extrach_car_label.sh```
+
    Before create the LMDB files. The labels should be converted to VOC type. We provide some matlab scripts.     
    The scripts are in `$CAFFE_ROOT/data/convert_labels/`. Just modify `converlabels.m`.
    ```Shell
    line 4: root_dir = '/your/path/to/KITTI/';
    ```
-   VOC type labels will be generated in `$KITTI_ROOT/training/labels_2car/xml/`. 
+   VOC type labels will be generated in `$KITTI_ROOT/training/labels_2car/xml/`.
    ```Shell
    cd $CAFFE_ROOT/data/KITTI-car/
    # Create the trainval.txt, test.txt, and test_name_size.txt in data/KITTI-car/
@@ -113,5 +120,4 @@ TBA
    For testing a model you trained, you show modify the path in `rrc_test.py`.
 
 ### Acknowledge
-Thanks to Wei Liu, we have benifited a lot from his previous work [SSD (Single Shot Multibox Detector)](https://github.com/weiliu89/caffe/tree/ssd).
-
+Thanks to Wei Liu, we have benifited a lot from his previous work [SSD (Single Shot Multibox Detector)](https://arxiv.org/abs/1512.02325) and his [code](https://github.com/weiliu89/caffe/tree/ssd).
