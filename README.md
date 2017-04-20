@@ -18,13 +18,12 @@ single stage end-to-end object detection network (RRC) to produce high accuracy 
 
 Please cite RRC in your publications if it helps your research:
 
-@inproceedings{   
-  jimmy2017rrc,   
-  title = {Accurate Single Stage Detector Using Recurrent Rolling Convolution},     
-  author = {Jimmy, Ren and Xiaohao, Chen and Jianbo, Liu and Wenxiu, Sun and Jiahao, Pang and Qiong, Yan and Yu-Wing, Tai and Li, Xu},   
-  booktitle = {CVPR},   
-  year = {2017}
-}
+  @inproceedings{jimmy2017rrc,   
+    title = {Accurate Single Stage Detector Using Recurrent Rolling Convolution},     
+    author = {Jimmy, Ren and Xiaohao, Chen and Jianbo, Liu and Wenxiu, Sun and Jiahao, Pang and Qiong, Yan and Yu-Wing, Tai and Li, Xu},   
+    booktitle = {CVPR},   
+    year = {2017}
+  }
 ### Contents
 1. [Installation](#installation)
 2. [Preparation](#preparation)
