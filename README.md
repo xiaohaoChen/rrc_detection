@@ -12,7 +12,8 @@ single stage end-to-end object detection network (RRC) to produce high accuracy 
 | [SDP+RPN](http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Yang_Exploit_All_the_CVPR_2016_paper.pdf)| 88.85% |
 | [MS-CNN](https://github.com/zhaoweicai/mscnn) | 89.02% |
 | [Sub-CNN](https://arxiv.org/pdf/1604.04693.pdf) | 89.04% |
-| RRC (single model) | **89.85%** |      
+| RRC (single model) | **89.85%** |  
+
 [KITTI ranking](http://www.jimmyren.com/papers/rrc_kitti.pdf)
 
 ### Citing RRC
