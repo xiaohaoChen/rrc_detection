@@ -55,8 +55,8 @@ Please cite RRC in your publications if it helps your research:
    By default, we assume the model is stored in `$CAFFE_ROOT/models/VGGNet/`.
 
 2. Download the KITTI dataset(http://www.cvlibs.net/datasets/kitti/eval_object.php).
-   By default, we assume the data is stored in `$HOME/data/KITTI/`
-   uzip the training images, testing images and the labels in `$HOME/data/KITTI/`.
+   By default, we assume the data is stored in `$HOME/data/KITTI/`       
+   Unzip the training images, testing images and the labels in `$HOME/data/KITTI/`.
 
 3. Create the LMDB file.
    For training .
